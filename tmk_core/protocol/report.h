@@ -87,14 +87,15 @@ enum consumer_usages {
     AUDIO_VOL_UP   = 0x0E9,
     AUDIO_VOL_DOWN = 0x0EA,
     // 15.15 Application Launch Buttons
-    AL_CC_CONFIG       = 0x183,
-    AL_EMAIL           = 0x18A,
-    AL_CALCULATOR      = 0x192,
-    AL_LOCAL_BROWSER   = 0x194,
-    AL_LOCK            = 0x19E,
-    AL_CONTROL_PANEL   = 0x19F,
-    AL_ASSISTANT       = 0x1CB,
-    AL_KEYBOARD_LAYOUT = 0x1AE,
+    AL_CC_CONFIG                    = 0x183,
+    AL_EMAIL                        = 0x18A,
+    AL_CALCULATOR                   = 0x192,
+    AL_LOCAL_BROWSER                = 0x194,
+    AL_TERMINAL_LOCK_OR_SCREENSAVER = 0x19E,
+    AL_CONTROL_PANEL                = 0x19F,
+    AL_ASSISTANT                    = 0x1CB,
+    DICTATION                       = 0x0CF,
+    AL_KEYBOARD_LAYOUT              = 0x1AE,
     // 15.16 Generic GUI Application Controls
     AC_NEW                         = 0x201,
     AC_OPEN                        = 0x202,
@@ -118,7 +119,7 @@ enum consumer_usages {
     AC_STOP                        = 0x226,
     AC_REFRESH                     = 0x227,
     AC_BOOKMARKS                   = 0x22A,
-    AC_NEXT_KEYBOARD_LAYOUT_SELECT = 0x29D,
+    AC_GLOBE                       = 0x29D,
     AC_DESKTOP_SHOW_ALL_WINDOWS    = 0x29F,
     AC_SOFT_KEY_LEFT               = 0x2A0
 };
@@ -321,6 +322,12 @@ static inline uint16_t KEYCODE2CONSUMER(uint8_t key) {
             return AC_DESKTOP_SHOW_ALL_WINDOWS;
         case KC_LAUNCHPAD:
             return AC_SOFT_KEY_LEFT;
+        case KC_GLOBE:
+            return AC_GLOBE;
+        case KC_COFFEE:
+            return AL_TERMINAL_LOCK_OR_SCREENSAVER;
+        case KC_DICTATION:
+            return DICTATION;
         default:
             return 0;
     }

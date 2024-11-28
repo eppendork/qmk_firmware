@@ -16,6 +16,17 @@
 
 #pragma once
 
+/* Apple*/
+#undef VENDOR_ID
+#define VENDOR_ID 0x05AC
+#undef PRODUCT_ID
+#define PRODUCT_ID 0x029C
+
+/* RGB matrix*/
+#define RGB_MATRIX_DEFAULT_HUE 111 // Sets the default hue value, if none has been set
+#define RGB_MATRIX_DEFAULT_SAT 255 // Sets the default saturation value, if none has been set
+#define RGB_MATRIX_DEFAULT_VAL 125 // Sets the default brightness value, if none has been set
+
 /* Encoder Configuration */
 #define ENCODER_DEFAULT_POS 0x3
 #define ENCODER_MAP_KEY_DELAY 2
