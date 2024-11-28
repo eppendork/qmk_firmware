@@ -286,6 +286,9 @@ enum qk_keycode_defines {
     KC_GLOBE = 0x00C3,
     KC_COFFEE = 0x00C4,
     KC_DICTATION = 0x00C5,
+    //KC_EMOJI = 0x00C6,
+    //KC_SCREENSAVER = 0x00C7,
+    //KC_FUNCTION = 0x00C8,
     KC_MS_UP = 0x00CD,
     KC_MS_DOWN = 0x00CE,
     KC_MS_LEFT = 0x00CF,
@@ -905,11 +908,16 @@ enum qk_keycode_defines {
     KC_BRID    = KC_BRIGHTNESS_DOWN,
     KC_CPNL    = KC_CONTROL_PANEL,
     KC_ASST    = KC_ASSISTANT,
+    // CUSTOM
     KC_MCTL    = KC_MISSION_CONTROL,
     KC_LPAD    = KC_LAUNCHPAD,
     KC_GLB     = KC_GLOBE,
     KC_COFF    = KC_COFFEE,
     KC_DICT    = KC_DICTATION,
+    //KC_EMOJ    = KC_EMOJI,
+    //KC_SCSV    = KC_SCREENSAVER,
+    //KC_FUNC    = KC_FUNCTION,
+    // CUSTOM
     KC_MS_U    = KC_MS_UP,
     KC_MS_D    = KC_MS_DOWN,
     KC_MS_L    = KC_MS_LEFT,
@@ -1410,6 +1418,7 @@ enum qk_keycode_defines {
 #define IS_BASIC_KEYCODE(code) ((code) >= KC_A && (code) <= KC_EXSEL)
 #define IS_SYSTEM_KEYCODE(code) ((code) >= KC_SYSTEM_POWER && (code) <= KC_SYSTEM_WAKE)
 #define IS_CONSUMER_KEYCODE(code) ((code) >= KC_AUDIO_MUTE && (code) <= KC_DICTATION)
+//#define IS_CONSUMER_KEYCODE(code) ((code) >= KC_AUDIO_MUTE && (code) <= KC_FUNCTION)
 #define IS_MOUSE_KEYCODE(code) ((code) >= KC_MS_UP && (code) <= KC_MS_ACCEL2)
 #define IS_MODIFIER_KEYCODE(code) ((code) >= KC_LEFT_CTRL && (code) <= KC_RIGHT_GUI)
 #define IS_SWAP_HANDS_KEYCODE(code) ((code) >= QK_SWAP_HANDS_TOGGLE && (code) <= QK_SWAP_HANDS_ONE_SHOT)
@@ -1432,6 +1441,7 @@ enum qk_keycode_defines {
 #define BASIC_KEYCODE_RANGE                 KC_A ... KC_EXSEL
 #define SYSTEM_KEYCODE_RANGE                KC_SYSTEM_POWER ... KC_SYSTEM_WAKE
 #define CONSUMER_KEYCODE_RANGE              KC_AUDIO_MUTE ... KC_DICTATION
+//#define CONSUMER_KEYCODE_RANGE              KC_AUDIO_MUTE ... KC_FUNCTION
 #define MOUSE_KEYCODE_RANGE                 KC_MS_UP ... KC_MS_ACCEL2
 #define MODIFIER_KEYCODE_RANGE              KC_LEFT_CTRL ... KC_RIGHT_GUI
 #define SWAP_HANDS_KEYCODE_RANGE            QK_SWAP_HANDS_TOGGLE ... QK_SWAP_HANDS_ONE_SHOT

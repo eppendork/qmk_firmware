@@ -16,12 +16,6 @@
 
 #pragma once
 
-/* Apple*/
-#undef VENDOR_ID
-#define VENDOR_ID 0x05AC
-#undef PRODUCT_ID
-#define PRODUCT_ID 0x029C
-
 #ifdef RGB_MATRIX_ENABLE
 /* RGB Matrix driver configuration */
 #    define DRIVER_COUNT 2

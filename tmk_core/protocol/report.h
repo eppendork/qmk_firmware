@@ -91,37 +91,41 @@ enum consumer_usages {
     AL_EMAIL                        = 0x18A,
     AL_CALCULATOR                   = 0x192,
     AL_LOCAL_BROWSER                = 0x194,
-    AL_TERMINAL_LOCK_OR_SCREENSAVER = 0x19E,
     AL_CONTROL_PANEL                = 0x19F,
     AL_ASSISTANT                    = 0x1CB,
-    DICTATION                       = 0x0CF,
     AL_KEYBOARD_LAYOUT              = 0x1AE,
     // 15.16 Generic GUI Application Controls
-    AC_NEW                         = 0x201,
-    AC_OPEN                        = 0x202,
-    AC_CLOSE                       = 0x203,
-    AC_EXIT                        = 0x204,
-    AC_MAXIMIZE                    = 0x205,
-    AC_MINIMIZE                    = 0x206,
-    AC_SAVE                        = 0x207,
-    AC_PRINT                       = 0x208,
-    AC_PROPERTIES                  = 0x209,
-    AC_UNDO                        = 0x21A,
-    AC_COPY                        = 0x21B,
-    AC_CUT                         = 0x21C,
-    AC_PASTE                       = 0x21D,
-    AC_SELECT_ALL                  = 0x21E,
-    AC_FIND                        = 0x21F,
-    AC_SEARCH                      = 0x221,
-    AC_HOME                        = 0x223,
-    AC_BACK                        = 0x224,
-    AC_FORWARD                     = 0x225,
-    AC_STOP                        = 0x226,
-    AC_REFRESH                     = 0x227,
-    AC_BOOKMARKS                   = 0x22A,
-    AC_GLOBE                       = 0x29D,
-    AC_DESKTOP_SHOW_ALL_WINDOWS    = 0x29F,
-    AC_SOFT_KEY_LEFT               = 0x2A0
+    AC_NEW                          = 0x201,
+    AC_OPEN                         = 0x202,
+    AC_CLOSE                        = 0x203,
+    AC_EXIT                         = 0x204,
+    AC_MAXIMIZE                     = 0x205,
+    AC_MINIMIZE                     = 0x206,
+    AC_SAVE                         = 0x207,
+    AC_PRINT                        = 0x208,
+    AC_PROPERTIES                   = 0x209,
+    AC_UNDO                         = 0x21A,
+    AC_COPY                         = 0x21B,
+    AC_CUT                          = 0x21C,
+    AC_PASTE                        = 0x21D,
+    AC_SELECT_ALL                   = 0x21E,
+    AC_FIND                         = 0x21F,
+    AC_SEARCH                       = 0x221,
+    AC_HOME                         = 0x223,
+    AC_BACK                         = 0x224,
+    AC_FORWARD                      = 0x225,
+    AC_STOP                         = 0x226,
+    AC_REFRESH                      = 0x227,
+    AC_BOOKMARKS                    = 0x22A,
+    // Apple
+    MISSION_CONTROL                 = 0x29F,
+    LAUNCHPAD                       = 0x2A0,
+    AC_NEXT_KEYBOARD_LAYOUT_SELECT  = 0x29D,
+    AL_TERMINAL_LOCK_OR_SCREENSAVER = 0x19E,
+    DICTATION                       = 0x0CF
+    //EMOJI                           = 0x0D9,
+    //AL_SCREEN_SAVER                 = 0x245,
+    //KEYBOARD_FN                     = 0x1D0
 };
 
 /* Generic Desktop Page (0x01)
@@ -319,15 +323,21 @@ static inline uint16_t KEYCODE2CONSUMER(uint8_t key) {
         case KC_WWW_FAVORITES:
             return AC_BOOKMARKS;
         case KC_MISSION_CONTROL:
-            return AC_DESKTOP_SHOW_ALL_WINDOWS;
+            return MISSION_CONTROL;
         case KC_LAUNCHPAD:
-            return AC_SOFT_KEY_LEFT;
+            return LAUNCHPAD;
         case KC_GLOBE:
-            return AC_GLOBE;
+            return AC_NEXT_KEYBOARD_LAYOUT_SELECT;
         case KC_COFFEE:
             return AL_TERMINAL_LOCK_OR_SCREENSAVER;
         case KC_DICTATION:
             return DICTATION;
+        //case KC_EMOJI:
+            //return EMOJI;
+        //case KC_SCREENSAVER:
+            //return AL_SCREEN_SAVER;
+        //case KC_FUNCTION:
+            //return KEYBOARD_FN;
         default:
             return 0;
     }

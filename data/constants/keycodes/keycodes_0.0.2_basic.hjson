@@ -3,7 +3,7 @@
         "0x00C1": {
             "group": "media",
             "key": "KC_MISSION_CONTROL",
-            "label": "Open Mission Control",
+            "label": "Mission Control",
             "aliases": [
                 "KC_MCTL"
             ]
@@ -11,9 +11,33 @@
         "0x00C2": {
             "group": "media",
             "key": "KC_LAUNCHPAD",
-            "label": "Open Launchpad",
+            "label": "Launchpad",
             "aliases": [
                 "KC_LPAD"
+            ]
+        }
+        "0x00C3": {
+            "group": "basic",
+            "key": "KC_GLOBE",
+            "label": "Apple Globe/FN Key",
+            "aliases": [
+                "KC_GLB"
+            ]
+        },
+        "0x00C4": {
+            "group": "basic",
+            "key": "KC_COFFEE",
+            "label": "Apple Terminal Lock/Screensaver Key",
+            "aliases": [
+                "KC_COFF"
+            ]
+        },
+        "0x00C5": {
+            "group": "basic",
+            "key": "KC_DICTATION",
+            "label": "Apple Dictation Key",
+            "aliases": [
+                "KC_DICT"
             ]
         }
     }
