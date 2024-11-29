@@ -21,6 +21,12 @@
 #define RGB_MATRIX_DEFAULT_SAT 255 // Sets the default saturation value, if none has been set
 #define RGB_MATRIX_DEFAULT_VAL 125 // Sets the default brightness value, if none has been set
 
+/* heatmap settings*/
+#define RGB_MATRIX_TYPING_HEATMAP_INCREASE_STEP 48 //heat rate
+#define RGB_MATRIX_TYPING_HEATMAP_DECREASE_DELAY_MS 12 //heat loss
+#define RGB_MATRIX_TYPING_HEATMAP_SPREAD 40 //latent transfer
+#define RGB_MATRIX_TYPING_HEATMAP_AREA_LIMIT 20 //conductance
+
 /* Encoder Configuration */
 #define ENCODER_DEFAULT_POS 0x3
 #define ENCODER_MAP_KEY_DELAY 2
