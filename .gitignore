@@ -115,3 +115,6 @@ via*.json
 # Keep firmware file
 !keyboards/keychron/*/firmware/*.bin
 applefn.patch
+lib/chibios
+lib/chibios-contrib
+lib/lvgl
